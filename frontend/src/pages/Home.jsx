@@ -64,6 +64,7 @@ const Home = () => {
               src="/images/artisan.jfif"
               alt="Artisan travaillant la céramique"
             />
+            <div className="brand__overlay" />
             <div className="brand__badge">
               <span className="brand__badge-num">40+</span>
               <span className="brand__badge-txt">Années d'artisanat</span>

@@ -111,6 +111,17 @@
   object-position: center top;
   display: block;
 }
+.brand__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom right,
+    rgba(44, 26, 14, 0.4) 0%,
+    rgba(124, 63, 42, 0.15) 50%,
+    transparent 100%
+  );
+  pointer-events: none;
+}
 .brand__badge {
   position: absolute;
   bottom: 1.5rem; right: 1.5rem;
