@@ -61,7 +61,7 @@ const Home = () => {
         <div className="container brand__inner">
           <div className="brand__image-wrap">
             <img
-              src="/images/artisan.jpg"
+              src="/images/artisan.jfif"
               alt="Artisan travaillant la céramique"
             />
             <div className="brand__badge">
