@@ -25,7 +25,6 @@ const Footer = () => {
           {/* Brand Col */}
           <div className="footer__col footer__col--brand">
             <div className="footer__logo">
-              <img src="/images/logo.jpg" alt="Lamsat Elbahi Logo" className="footer__logo-img" />
               <div>
                 <div className="footer__logo-main">Lamsat Elbahi</div>
                 <div className="footer__logo-sub">Céramiques Artisanales</div>

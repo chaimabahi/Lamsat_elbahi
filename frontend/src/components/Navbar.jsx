@@ -25,10 +25,9 @@ const Navbar = () => {
     <header className={`navbar ${scrolled || !isHome ? 'navbar--solid' : ''} ${menuOpen ? 'navbar--open' : ''}`}>
       <div className="navbar__inner container">
         <Link to="/" className="navbar__logo">
-          <img src="/images/logo.jpg" alt="Lamsat Elbahi Logo" className="navbar__logo-img" />
           <span className="navbar__logo-text">
             <span className="navbar__logo-main">Lamsat</span>
-            <span className="navbar__logo-sub">Elbahi</span>
+            <span className="navbar__logo-sub">- Elbahi</span>
           </span>
         </Link>
 
@@ -38,8 +37,8 @@ const Navbar = () => {
           <NavLink to="/contact" className={({ isActive }) => `navbar__link ${isActive ? 'active' : ''}`}>Contact</NavLink>
           <Link to="/cart" className="navbar__cart-btn">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
-              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+              <circle cx="9" cy="21" r="1" /><circle cx="20" cy="21" r="1" />
+              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
             </svg>
             Panier
             {cartCount > 0 && <span className="navbar__badge">{cartCount}</span>}
