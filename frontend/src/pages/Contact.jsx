@@ -26,14 +26,21 @@ const Contact = () => (
             <div className="contact-card__icon">📱</div>
             <div>
               <h4>WhatsApp</h4>
-              <a href="https://wa.me/213XXXXXXXXX" target="_blank" rel="noreferrer">+213 XX XX XX XX</a>
+              <a href="https://wa.me/21650509129" target="_blank" rel="noreferrer">+216 50 509 129</a>
+            </div>
+          </div>
+          <div className="contact-card">
+            <div className="contact-card__icon">📞</div>
+            <div>
+              <h4>Téléphone</h4>
+              <a href="tel:+21697159838">+216 97 159 838</a>
             </div>
           </div>
           <div className="contact-card">
             <div className="contact-card__icon">📧</div>
             <div>
               <h4>Email</h4>
-              <a href="mailto:contact@lamsatelbahi.dz">contact@lamsatelbahi.dz</a>
+              <a href="mailto:lamsatelbahi@gmail.com">lamsatelbahi@gmail.com</a>
             </div>
           </div>
           <div className="contact-card">
@@ -46,7 +53,7 @@ const Contact = () => (
         </div>
 
         <a
-          href="https://wa.me/213XXXXXXXXX"
+          href="https://wa.me/21650509129"
           target="_blank"
           rel="noreferrer"
           className="btn btn-whatsapp"
@@ -67,7 +74,7 @@ const Contact = () => (
         </div>
         <div className="form-group">
           <label htmlFor="contact-phone">Téléphone / WhatsApp</label>
-          <input id="contact-phone" type="tel" placeholder="+213 XX XX XX XX" />
+          <input id="contact-phone" type="tel" placeholder="+216 XX XXX XXX" />
         </div>
         <div className="form-group">
           <label htmlFor="contact-subject">Sujet</label>

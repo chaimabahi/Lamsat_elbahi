@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
-import axios from 'axios';
+import { products as allProducts } from '../data/products';
 import { useCart } from '../context/CartContext';
 import './ProductDetail.css';
 
@@ -15,17 +15,10 @@ const ProductDetail = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const { addToCart } = useCart();
-  const [product, setProduct] = useState(null);
-  const [loading, setLoading] = useState(true);
+  const product = allProducts.find(p => p.id === id);
+  const loading = false;
   const [qty, setQty] = useState(1);
   const [added, setAdded] = useState(false);
-
-  useEffect(() => {
-    setLoading(true);
-    axios.get(`http://localhost:5000/api/products/${id}`)
-      .then(res => { setProduct(res.data); setLoading(false); })
-      .catch(() => { setLoading(false); });
-  }, [id]);
 
   const handleAdd = () => {
     addToCart(product, qty);
@@ -126,7 +119,7 @@ const ProductDetail = () => {
 
             {/* WhatsApp */}
             <a
-              href={`https://wa.me/213XXXXXXXXX?text=${encodeURIComponent(
+              href={`https://wa.me/21650509129?text=${encodeURIComponent(
                 `Bonjour ! Je suis intéressé par :\n• ${product.name} x${qty} — ${(product.price * qty).toLocaleString()} DT`
               )}`}
               target="_blank"

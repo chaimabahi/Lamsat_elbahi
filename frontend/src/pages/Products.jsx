@@ -1,33 +1,23 @@
 import { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import axios from 'axios';
+import { products as allProducts } from '../data/products';
 import ProductCard from '../components/ProductCard';
 import CategoryFilter from '../components/CategoryFilter';
 import './Products.css';
 
 const Products = () => {
-  const [products, setProducts] = useState([]);
-  const [filtered, setFiltered] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [filtered, setFiltered] = useState(allProducts);
+  const loading = false;
   const [searchParams, setSearchParams] = useSearchParams();
   const activeCategory = searchParams.get('category') || 'all';
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/products')
-      .then(res => {
-        setProducts(res.data);
-        setLoading(false);
-      })
-      .catch(() => setLoading(false));
-  }, []);
-
-  useEffect(() => {
     if (activeCategory === 'all') {
-      setFiltered(products);
+      setFiltered(allProducts);
     } else {
-      setFiltered(products.filter(p => p.category === activeCategory));
+      setFiltered(allProducts.filter(p => p.category === activeCategory));
     }
-  }, [activeCategory, products]);
+  }, [activeCategory]);
 
   const handleCategory = (cat) => {
     setSearchParams(cat === 'all' ? {} : { category: cat });

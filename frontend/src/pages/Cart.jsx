@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { useCart } from '../context/CartContext';
 import './Cart.css';
 
-const WHATSAPP_NUMBER = '213XXXXXXXXX';
+const WHATSAPP_NUMBER = '21650509129';
 
 const Cart = () => {
   const { cart, removeFromCart, updateQuantity, cartTotal, clearCart } = useCart();

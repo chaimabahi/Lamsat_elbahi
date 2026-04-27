@@ -34,12 +34,12 @@ export const CartProvider = ({ children }) => {
       }
       return [...prev, { ...product, quantity }];
     });
-    showToast(`${product.name} added to cart!`);
+    showToast(`${product.name} ajouté au panier !`);
   };
 
   const removeFromCart = (productId) => {
     setCart(prev => prev.filter(item => item.id !== productId));
-    showToast('Item removed from cart', 'info');
+    showToast('Article retiré du panier', 'info');
   };
 
   const updateQuantity = (productId, quantity) => {
