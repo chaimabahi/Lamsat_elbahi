@@ -53,7 +53,7 @@ const Home = () => {
         <div className="hero__bg">
           <img
             src="/images/hero.png"
-            alt="Céramique Tunisienne Moderne"
+            alt="Ceramics background"
             className="hero__img"
           />
           <div className="hero__overlay" />
@@ -67,6 +67,12 @@ const Home = () => {
           <p className="hero__desc">
             Découvrez les motifs vibrants et le savoir-faire intemporel de Nabeul et Djerba. Chaque pièce est peinte à la main avec des générations de passion.
           </p>
+          <div className="hero__contact-info">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ marginRight: '8px' }}>
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+            <span>+216 97 159 838</span>
+          </div>
           <div className="hero__cta">
             <Link to="/products" className="btn btn-primary">Découvrir la Collection</Link>
             <Link to="/contact" className="btn btn-outline hero__btn-outline">Nous Contacter</Link>
@@ -75,6 +81,28 @@ const Home = () => {
         <div className="hero__scroll">
           <span>Défiler pour explorer</span>
           <div className="hero__scroll-line" />
+        </div>
+      </section>
+
+      {/* Featured Products */}
+      <section className="section">
+        <div className="container">
+          <div className="section-header">
+            <span className="label">Notre Collection</span>
+            <div className="divider" />
+            <h2>Pièces Vedettes</h2>
+            <p>Une sélection de nos pièces préférées — chacune prête à embellir votre intérieur.</p>
+          </div>
+          {loading ? (
+            <div className="home__loading">Chargement de la collection...</div>
+          ) : (
+            <div className="products-grid">
+              {featured.map(p => <ProductCard key={p.id} product={p} />)}
+            </div>
+          )}
+          <div style={{ textAlign: 'center', marginTop: '4rem' }}>
+            <Link to="/products" className="btn btn-outline">Voir toute la Boutique</Link>
+          </div>
         </div>
       </section>
 
@@ -125,28 +153,6 @@ const Home = () => {
                 <p>{f.desc}</p>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Featured Products */}
-      <section className="section">
-        <div className="container">
-          <div className="section-header">
-            <span className="label">Notre Collection</span>
-            <div className="divider" />
-            <h2>Pièces Vedettes</h2>
-            <p>Une sélection de nos pièces préférées — chacune prête à embellir votre intérieur.</p>
-          </div>
-          {loading ? (
-            <div className="home__loading">Chargement de la collection…</div>
-          ) : (
-            <div className="products-grid">
-              {featured.map(p => <ProductCard key={p.id} product={p} />)}
-            </div>
-          )}
-          <div style={{ textAlign: 'center', marginTop: '3rem' }}>
-            <Link to="/products" className="btn btn-outline">Voir Tous les Produits</Link>
           </div>
         </div>
       </section>

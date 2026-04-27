@@ -30,10 +30,9 @@ const Cart = () => {
     return (
       <main className="cart-page">
         <div className="container cart-empty">
-          <div className="cart-empty__icon">🏺</div>
           <h2>Votre panier est vide</h2>
-          <p>Vous n'avez pas encore ajouté de pièces. Explorez notre collection et trouvez quelque chose de beau.</p>
-          <Link to="/products" className="btn btn-primary">Parcourir la Collection</Link>
+          <p>Vous n'avez pas encore ajouté de pièces à votre collection.</p>
+          <Link to="/products" className="btn btn-primary">Découvrir la Boutique</Link>
         </div>
       </main>
     );

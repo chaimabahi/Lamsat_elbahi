@@ -53,11 +53,20 @@
   color: var(--color-accent);
 }
 .hero__desc {
-  color: rgba(255,255,255,0.8);
+  color: #ffffff;
   font-size: 1.05rem;
   line-height: 1.75;
   max-width: 520px;
-  margin-bottom: 2.25rem;
+  margin-bottom: 1.5rem;
+}
+.hero__contact-info {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
 }
 .hero__cta { display: flex; gap: 1rem; flex-wrap: wrap; }
 .hero__btn-outline {

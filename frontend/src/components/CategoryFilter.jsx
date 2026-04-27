@@ -2,10 +2,10 @@ import './CategoryFilter.css';
 
 const CATEGORIES = [
   { value: 'all', label: 'Tous les Produits' },
-  { value: 'plates', label: '🍽 Assiettes & Bols' },
-  { value: 'vases', label: '🏺 Vases' },
-  { value: 'mugs', label: '☕ Mugs' },
-  { value: 'decoration', label: '✨ Décoration' },
+  { value: 'plates', label: 'Assiettes & Bols' },
+  { value: 'vases', label: 'Vases' },
+  { value: 'mugs', label: 'Mugs' },
+  { value: 'decoration', label: 'Décoration' },
 ];
 
 const CategoryFilter = ({ active, onChange }) => (
