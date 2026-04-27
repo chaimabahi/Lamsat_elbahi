@@ -25,7 +25,7 @@ const Navbar = () => {
     <header className={`navbar ${scrolled || !isHome ? 'navbar--solid' : ''} ${menuOpen ? 'navbar--open' : ''}`}>
       <div className="navbar__inner container">
         <Link to="/" className="navbar__logo">
-          <span className="navbar__logo-icon">🏺</span>
+          <img src="/images/logo.jpg" alt="Lamsat Elbahi Logo" className="navbar__logo-img" />
           <span className="navbar__logo-text">
             <span className="navbar__logo-main">Lamsat</span>
             <span className="navbar__logo-sub">Elbahi</span>

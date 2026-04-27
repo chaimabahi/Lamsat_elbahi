@@ -25,7 +25,11 @@
   align-items: center;
   gap: 0.6rem;
 }
-.navbar__logo-icon { font-size: 1.6rem; }
+.navbar__logo-img {
+  height: 40px;
+  width: auto;
+  border-radius: var(--radius-sm);
+}
 .navbar__logo-text {
   display: flex;
   flex-direction: column;
